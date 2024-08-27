@@ -9,5 +9,26 @@
         </classes>
     </test>
 
+    <test name="Truck Policy Creation">
+        <parameter name="data-set" value="data/truck-data.xml"/>
+        <classes>
+            <class name="com.yourcompany.example.tests.TestInsurancePolicy"/>
+        </classes>
+    </test>
+
+    <test name="Motorcycle Policy Creation">
+        <parameter name="data-set" value="data/motorcycle-data.xml"/>
+        <classes>
+            <class name="com.yourcompany.example.tests.TestInsurancePolicy"/>
+        </classes>
+    </test>
+
+    <test name="Random Policy Creation">
+        <parameter name="data-set" value="data/random-data.xml"/>
+        <classes>
+            <class name="com.yourcompany.example.tests.TestInsurancePolicy"/>
+        </classes>
+    </test>
+
 
 </suite>

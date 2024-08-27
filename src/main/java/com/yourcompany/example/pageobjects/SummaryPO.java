@@ -30,14 +30,14 @@ public class SummaryPO extends PageObjectModel {
     @FindBy(xpath = "//strong[.='Annual Mileage [mi]:']/../span")
     private WebComponent annualMileage;
     //Truck related fields
-    @FindBy(xpath = "//strong[.=':']/../span")
+    @FindBy(xpath = "//strong[.='Payload [kg]:']/../span")
     private WebComponent payload;
-    @FindBy(xpath = "//strong[.=':']/../span")
+    @FindBy(xpath = "//strong[.='Total Weight [kg]:']/../span")
     private WebComponent totalWeight;
     //Motorcycle related fields
-    @FindBy(xpath = "//strong[.=':']/../span")
+    @FindBy(xpath = "//strong[.='Model:']/../span")
     private WebComponent model;
-    @FindBy(xpath = "//strong[.=':']/../span")
+    @FindBy(xpath = "//strong[.='Cylinder Capacity [ccm]:']/../span")
     private WebComponent cylinderCapacity;
 
     //Client Info related fields
@@ -69,7 +69,7 @@ public class SummaryPO extends PageObjectModel {
     @Step("Validate Summary Page")
     public void validate() {
         enumerateFields((pageComponent, field) -> {
-            if (pageComponent.getData() != null) {
+            if (pageComponent.getData() != null && !pageComponent.getData().isEmpty()) {
                 reportForValidation(field.getName(), pageComponent.getData());
                 pageComponent.validateData(DataTypes.Data);
             } else {

@@ -14,9 +14,10 @@ public class TestInsurancePolicy extends TestNGBase {
     @Stories("User creates new insurance policy quote")
     @Parameters("data-set")
     @Test
-    public void testCreatePolicy(@Optional("data/automobile-data.xml") String dataSet){
+    public void testCreatePolicy(@Optional("data/random-data.xml") String dataSet){
         VehicleInsuranceDO vehicleInsuranceDO = new VehicleInsuranceDO(getContext()).fromResource(dataSet);
         vehicleInsuranceDO.createNewInsurancePolicy();
         vehicleInsuranceDO.validateSummary();
     }
+
 }

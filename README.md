@@ -1,6 +1,6 @@
 # test-lab-example
 
-This is a test automation example using the **uitaf** open source project for UI testing. The test is designed to test the Vehicle Insurance Quote application located at https://uitaf.org/test/ using the Chrome browser.
+This is a test automation example using the **UITAF** open source project for UI testing. The test is designed to test the Vehicle Insurance Quote application located at https://uitaf.org/test/ using the Chrome browser.
 
 The test assumes that Chrome browser is installed on the target machine where this test should run and it supported by Java 8 only!
 
@@ -18,7 +18,7 @@ To build and execute the solution just follow these steps:
 3. Build the solution by invoking following command:  `mvn clean package`
 4. Execute the solution by invoking `java -jar target/example.jar`
 
-The test will invoke 5 Chrome browser instances and execute 5 different test cases in parallel.
+The test will invoke 4 Chrome browser instances and execute 4 different test cases in parallel.
 At the end of the test, report with execution results will be launched in the default browser.
 
 The test automation framework used in this example is designed to provide a comprehensive solution for automating the validation of enterprise business applications. It utilizes a component-based, data-driven, and business-oriented approach to address the complexities of web page interactions and web element interactions.

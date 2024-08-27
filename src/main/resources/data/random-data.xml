@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<vehicle-insurance-domain-object>
+    <aliases>
+        <url>${env.getUrl()}</url>
+        <vehicleType>$[CUSTOM_LIST('','Automobile,Truck,Motorcycle')]</vehicleType>
+        <make>$[CUSTOM_LIST('','Audi,BMW,Ford,Honda,Mazda,Mercedes Benz,Nissan,Opel,Porsche,Renault,Skoda,Suzuki,Toyota,Volkswagen,Volvo')]</make>
+        <enginePerformance>$[NUMBER('#','50,500')]</enginePerformance>
+        <manufacturerDate>$[DATE('yyyy-MM-dd','2000/01/01|2024/12/31|yyyy/MM/dd')]</manufacturerDate>
+        <seats>$[NUMBER('#','1,6')]</seats>
+        <fuelType>$[CUSTOM_LIST('','Petrol,Diesel,Electric Power,Gas,Other')]</fuelType>
+        <listPrice>$[NUMBER('#','1000,100000')]</listPrice>
+        <licensePlate>$[ALPHANUMERIC('(A)(B)(C)(D)-[a][b][c]','')]</licensePlate>
+        <annualMileage>$[NUMBER('#','1000,100000')]</annualMileage>
+        <firstName>$[HUMAN_NAMES('{M}','')]</firstName>
+        <lastName>$[HUMAN_NAMES('{S}','')]</lastName>
+        <dateOfBirth>$[DATE('yyyy-MM-dd','1960/01/01|2003/12/31|yyyy/MM/dd')]</dateOfBirth>
+        <gender>$[CUSTOM_LIST('','Male,Female,Other')]</gender>
+        <address>${AddressGen.generateAddress()}</address>
+        <streetAddress>${address.streetNumber + " " + address.streetName}</streetAddress>
+        <country>${address.country}</country>
+        <zipCode>${address.postalCode}</zipCode>
+        <city>${address.city}</city>
+        <occupation>$[CUSTOM_LIST('','Software Developer,Graphic Designer,Electrician,Chef,Teacher,Nurse,Pilot,Photographer,Accountant')]</occupation>
+        <hobbies>$[CUSTOM_LIST('','Reading,Hiking,Painting,Cooking,Gardening,Photography,Traveling,Playing Guitar,Writing,Biking,Fishing')]</hobbies>
+        <website>$[WORD('https://{a}{b}.com','')]</website>
+
+        <payload>${vehicleType.equals("Truck") ? "116450" : ""}</payload>
+        <totalWeight>${vehicleType.equals("Truck") ? "125000" : ""}</totalWeight>
+
+        <model>${vehicleType.equals("Motorcycle") ? "Gold Wing DCT" : ""}</model>
+        <cylinderCapacity>${vehicleType.equals("Motorcycle") ? "1833" : ""}</cylinderCapacity>
+    </aliases>
+    <appUrl>${url}</appUrl>
+    <vehicleInfoPO>
+        <vehicleType>${vehicleType}</vehicleType>
+        <make>${make}</make>
+        <enginePerformance>${enginePerformance}</enginePerformance>
+        <manufacturerDate>${manufacturerDate}</manufacturerDate>
+        <seats>${seats}</seats>
+        <fuelType>${fuelType}</fuelType>
+        <listPrice>${listPrice}</listPrice>
+        <licensePlate>${licensePlate}</licensePlate>
+        <annualMileage>${annualMileage}</annualMileage>
+        <payload>${payload}</payload>
+        <totalWeight>${totalWeight}</totalWeight>
+        <model>${model}</model>
+        <cylinderCapacity>${cylinderCapacity}</cylinderCapacity>
+    </vehicleInfoPO>
+    <clientInfoPO>
+        <firstName>${firstName}</firstName>
+        <lastName>${lastName}</lastName>
+        <dateOfBirth>${dateOfBirth}</dateOfBirth>
+        <gender>${gender}</gender>
+        <streetAddress>${streetAddress}</streetAddress>
+        <country>${country}</country>
+        <zipCode>${zipCode}</zipCode>
+        <city>${city}</city>
+        <occupation>${occupation}</occupation>
+        <hobbies>${hobbies}</hobbies>
+        <website>${website}</website>
+        <picture>data/face.png</picture>
+    </clientInfoPO>
+    <summaryPO>
+        <vehicleType>${vehicleType}</vehicleType>
+        <make>${make}</make>
+        <enginePerformance>${enginePerformance}</enginePerformance>
+        <manufacturerDate>${manufacturerDate}</manufacturerDate>
+        <seats>${seats}</seats>
+        <fuelType>${fuelType}</fuelType>
+        <listPrice>${listPrice}</listPrice>
+        <licensePlate>${licensePlate}</licensePlate>
+        <annualMileage>${annualMileage}</annualMileage>
+        <firstName>${firstName}</firstName>
+        <lastName>${lastName}</lastName>
+        <dateOfBirth>${dateOfBirth}</dateOfBirth>
+        <gender>${gender}</gender>
+        <streetAddress>${streetAddress}</streetAddress>
+        <country>${country}</country>
+        <zipCode>${zipCode}</zipCode>
+        <city>${city}</city>
+        <occupation>${occupation}</occupation>
+        <hobbies>${hobbies}</hobbies>
+        <website>${website}</website>
+        <picture>face.png</picture>
+        <payload>${payload}</payload>
+        <totalWeight>${totalWeight}</totalWeight>
+        <model>${model}</model>
+        <cylinderCapacity>${cylinderCapacity}</cylinderCapacity>
+    </summaryPO>
+</vehicle-insurance-domain-object>

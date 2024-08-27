@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<setup>
+    <environment environmentName="prod" url="https://uitaf.org/test/">
+        <user role="user"/>
+    </environment>
+</setup>

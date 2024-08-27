@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Policy suite" verbose="1" parallel="tests">
+
+    <test name="Automobile Policy Creation">
+        <parameter name="data-set" value="data/automobile-data.xml"/>
+        <classes>
+            <class name="com.yourcompany.example.tests.TestInsurancePolicy"/>
+        </classes>
+    </test>
+
+
+</suite>

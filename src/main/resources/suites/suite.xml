@@ -30,5 +30,12 @@
         </classes>
     </test>
 
+    <test name="Random Policy Creation BDD">
+        <parameter name="data-set" value="data/random-data.xml"/>
+        <classes>
+            <class name="com.yourcompany.example.tests.TestInsurancePolicyBDD"/>
+        </classes>
+    </test>
+
 
 </suite>

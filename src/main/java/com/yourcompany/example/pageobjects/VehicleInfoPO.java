@@ -49,7 +49,7 @@ public class VehicleInfoPO extends PageObjectModel {
         autoFillPage();
     }
 
-    @Step("Click Submit Button")
+    @Step("Click Next Button")
     public void next() {
         nextButton.click();
         WebHelper.getWebDriverWait().until(ExpectedConditions.invisibilityOfElementLocated(nextButton.getLocator()));

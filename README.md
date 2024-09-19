@@ -7,13 +7,11 @@ The test assumes that Chrome browser is installed on the target machine where th
 Prerequisites:
 
 1. Install JDK version 8
-2. Install Maven
-3. Install Git
+2. Install Git
+3. Ensure Chrome browser is installed on the machine where the test will run.
 4. Optionally you can install IntelliJ and open this project as maven project
 
 To build and execute the solution just follow these steps:
-
-## Instructions
 
 1. **Clone the repository to your machine:**
    ```bash

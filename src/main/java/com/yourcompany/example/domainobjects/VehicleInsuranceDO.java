@@ -1,12 +1,12 @@
 package com.yourcompany.example.domainobjects;
 
+import com.braimanm.ui.auto.context.WebDriverContext;
+import com.braimanm.ui.auto.pagecomponent.AliasedData;
+import com.braimanm.uitaf.support.DomainObjectModel;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.yourcompany.example.pageobjects.ClientInfoPO;
 import com.yourcompany.example.pageobjects.SummaryPO;
 import com.yourcompany.example.pageobjects.VehicleInfoPO;
-import ui.auto.core.support.DomainObjectModel;
-import ui.auto.core.support.TestContext;
-import ui.auto.core.pagecomponent.AliasedData;
 
 @XStreamAlias("vehicle-insurance-domain-object")
 public class VehicleInsuranceDO extends DomainObjectModel {
@@ -17,7 +17,7 @@ public class VehicleInsuranceDO extends DomainObjectModel {
 
     private VehicleInsuranceDO() {}
 
-    public VehicleInsuranceDO(TestContext context) {
+    public VehicleInsuranceDO(WebDriverContext context) {
         this.context = context;
     }
 

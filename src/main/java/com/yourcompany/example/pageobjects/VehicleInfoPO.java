@@ -1,15 +1,15 @@
 package com.yourcompany.example.pageobjects;
 
+import com.braimanm.datainstiller.data.Data;
+import com.braimanm.ui.auto.components.SelectComponent;
+import com.braimanm.ui.auto.components.WebComponent;
+import com.braimanm.ui.auto.utils.WebDriverUtils;
+import com.braimanm.uitaf.support.PageObjectModel;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.yourcompany.example.components.DateComponent;
-import datainstiller.data.Data;
+import io.qameta.allure.Step;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import ru.yandex.qatools.allure.annotations.Step;
-import ui.auto.core.components.SelectComponent;
-import ui.auto.core.components.WebComponent;
-import ui.auto.core.support.PageObjectModel;
-import ui.auto.core.utils.WebHelper;
 
 @XStreamAlias("vehicle-info-page-object")
 public class VehicleInfoPO extends PageObjectModel {
@@ -52,12 +52,14 @@ public class VehicleInfoPO extends PageObjectModel {
     @Step("Click Next Button")
     public void next() {
         nextButton.click();
-        WebHelper.getWebDriverWait().until(ExpectedConditions.invisibilityOfElementLocated(nextButton.getLocator()));
+        WebDriverUtils.getWebDriverWait().until(ExpectedConditions.invisibilityOfElementLocated(nextButton.getLocator()));
     }
 
     //Generate report entry for each populated component
-    @Step("Populate field \"{0}\" with value \"{1}\"")
     @Override
-    protected void reportForAutoFill(String fieldName, String value) {}
+    @Step("Populate field \"{0}\" with value \"{1}\"")
+    protected void reportForAutoFill(String fieldName, String value) {
+        super.reportForAutoFill(fieldName, value);
+    }
 
 }

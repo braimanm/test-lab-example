@@ -1,15 +1,14 @@
 # test-lab-example
 
-This is a test automation example using the **UITAF** open source project for UI testing. The test is designed to test the Vehicle Insurance Quote application located at https://uitaf.org/test/ using the Chrome browser.
-
-The test assumes that Chrome browser is installed on the target machine where this test should run and it supported by Java 8 only!
+This is an example of using the [**UITAF**](https://uitaf.org) open-source project for UI testing.
 
 Prerequisites:
 
-1. Install JDK version 8
+1. Install JDK 11 or higher
 2. Install Git
-3. Ensure Chrome browser is installed on the machine where the test will run.
+3. Ensure that the Chrome browser is installed on the machine where the test will be executed.
 4. Optionally you can install IntelliJ and open this project as maven project
+
 
 To build and execute the solution just follow these steps:
 
@@ -36,15 +35,16 @@ To build and execute the solution just follow these steps:
    java -jar target/example.jar
    ```
 
-The test will invoke 5 Chrome browser instances and execute 5 different test cases in parallel.
-At the end of the test, report with execution results will be launched in the default browser.
+The test will launch 5 Chrome browser instances and execute 5 different test cases in parallel. Upon completion, a report with the execution results will be opened in the default browser.
 
-The test automation framework used in this example is designed to provide a comprehensive solution for automating the validation of enterprise business applications. It utilizes a component-based, data-driven, and business-oriented approach to address the complexities of web page interactions and web element interactions.
+The test automation framework used in this example is designed to provide a comprehensive solution for automating the validation of enterprise business applications. It employs a component-based, data-driven, and business-oriented approach to address the complexities of web page and element interactions.
 
-One of the key features of the framework is its focus on solving business-oriented validations, which allows for a more efficient and streamlined test automation process. Additionally, the framework addresses data-related issues by implementing separation of concerns (SOC) principles, which ensures that the test code logic is clean and completely separated from the data facilities. This allows for well-crafted tests to be written once and then used with a large number of different datasets.
+A key feature of the framework is its focus on business-oriented validations, enabling a more efficient and streamlined test automation process. It addresses data-related challenges by implementing Separation of Concerns (SOC) principles, ensuring that test logic is cleanly separated from data management. This allows for the creation of well-structured tests that can be reused with numerous datasets.
 
-The datasets that are used in this framework can contain both static and dynamically generated data supplied to the test during execution, and can alter the flow of the test depending on the supplied data. The framework also utilizes the "page object" design pattern, which allows for automatic population of all components on a page in a single line of code. Furthermore, page object classes are made serializable to and from datasets, and the framework is also capable of generating datasets from test assets, eliminating the need for manual data input.
+The datasets used in this framework can include both static and dynamically generated data supplied during test execution, with the ability to alter the test flow based on the provided data. The framework also utilizes the Page Object design pattern, allowing for automatic population of all components on a page with a single line of code. Page Object classes are made serializable to and from datasets, and the framework can generate datasets from test assets, reducing the need for manual data entry.
 
-Another notable feature of the framework is its ability to provide implicit testing during web component population and automatic retry in case data is inserted incorrectly due to issues with the web application, web browser, or underlying operating system instability. This mimics human interaction with the web application and allows for a more realistic and accurate testing process.
+Another standout feature is the framework’s capability to perform implicit testing during web component population and to automatically retry operations if data insertion fails due to web application, browser, or OS instability. This simulates realistic human interaction with the application, enhancing the accuracy of the testing process.
 
-All of the features mentioned here are made possible by the introduction of "page components," which are much more sophisticated than traditional Selenium web elements. A page component is a reusable test artifact written in Java that is designed to provide supplied data to the application under test, regardless of the complexity of the component. The complexity and logic of the component are encapsulated within the component itself, ensuring that they do not leak into the test code.
+These features are enabled by the introduction of “Page Components,” which are more advanced than traditional Selenium web elements. A Page Component is a reusable test artifact written in Java, designed to supply data to the application under test, regardless of the component’s complexity. The complexity and logic are encapsulated within the component itself, ensuring they remain separate from the test code.
+
+To learn more about this framework, visit https://uitaf.org.

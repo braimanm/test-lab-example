@@ -2,35 +2,35 @@
 
 <suite name="Policy suite" verbose="1" parallel="tests">
 
-    <test name="Automobile Policy Creation">
+    <test name="Automobile Policy Quote">
         <parameter name="data-set" value="data/automobile-data.xml"/>
         <classes>
             <class name="com.yourcompany.example.tests.TestInsurancePolicy"/>
         </classes>
     </test>
 
-    <test name="Truck Policy Creation">
+    <test name="Truck Policy Quote">
         <parameter name="data-set" value="data/truck-data.xml"/>
         <classes>
             <class name="com.yourcompany.example.tests.TestInsurancePolicy"/>
         </classes>
     </test>
 
-    <test name="Motorcycle Policy Creation">
+    <test name="Motorcycle Policy Quote">
         <parameter name="data-set" value="data/motorcycle-data.xml"/>
         <classes>
             <class name="com.yourcompany.example.tests.TestInsurancePolicy"/>
         </classes>
     </test>
 
-    <test name="Random Policy Creation">
+    <test name="Random Policy Quote">
         <parameter name="data-set" value="data/random-data.xml"/>
         <classes>
             <class name="com.yourcompany.example.tests.TestInsurancePolicy"/>
         </classes>
     </test>
 
-    <test name="Random Policy Creation BDD">
+    <test name="BDD Random Policy Quote">
         <parameter name="data-set" value="data/random-data.xml"/>
         <classes>
             <class name="com.yourcompany.example.tests.TestInsurancePolicyBDD"/>

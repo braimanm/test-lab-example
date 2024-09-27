@@ -1,11 +1,12 @@
 package com.yourcompany.example.components;
 
+import com.braimanm.ui.auto.data.DataTypes;
+import com.braimanm.ui.auto.pagecomponent.PageComponent;
+import com.braimanm.ui.auto.utils.WebDriverUtils;
 import org.apache.commons.io.FileUtils;
 import org.assertj.core.api.Assertions;
 import org.openqa.selenium.JavascriptExecutor;
-import ui.auto.core.data.DataTypes;
-import ui.auto.core.pagecomponent.PageComponent;
-import ui.auto.core.utils.WebHelper;
+
 
 import java.io.File;
 import java.io.IOException;
@@ -36,7 +37,7 @@ public class FileUploadComponent extends PageComponent {
 
     @Override
     public String getValue() {
-        JavascriptExecutor js = (JavascriptExecutor) WebHelper.getWebDriver();
+        JavascriptExecutor js = WebDriverUtils.getJSExecutor();
         String fileName = (String) js.executeScript("return arguments[0].files[0].name;", coreElement);
         return filePath.getParent() + "/" + fileName;
     }

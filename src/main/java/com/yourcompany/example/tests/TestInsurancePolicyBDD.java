@@ -1,22 +1,26 @@
 package com.yourcompany.example.tests;
 
+import com.braimanm.uitaf.testng.TestNGBase;
 import com.yourcompany.example.domainobjects.VehicleInsuranceBDD;
+import io.qameta.allure.Description;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Story;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import ru.yandex.qatools.allure.annotations.Features;
-import ru.yandex.qatools.allure.annotations.Stories;
-import ui.auto.core.testng.TestNGBase;
-import static ui.auto.core.utils.GivenWhenThen.*;
-
+import static com.braimanm.uitaf.utils.GivenWhenThen.*;
 
 public class TestInsurancePolicyBDD extends TestNGBase {
 
-    @Features("Insurance Policy")
-    @Stories("BDD: User creates new insurance policy quote")
+    @Feature("Insurance Policy")
+    @Story("BDD: User creates new insurance policy quote")
     @Parameters("data-set")
+    @Description("Given the user is on Vehicle Insurance page\n" +
+            "When the user populates the vehicle insurance information page with provided data and clicks next button\n" +
+            "And the user populates the client information with provided data and clicks submit button\n" +
+            "Then user validates that the summary page contains the expected fields and values")
     @Test
-    public void testCreatePolicy(@Optional("data/random-data.xml") String dataSet){
+    public void testCreatePolicyQuoteBDD(@Optional("data/random-data.xml") String dataSet){
         VehicleInsuranceBDD user = new VehicleInsuranceBDD(getContext()).fromResource(dataSet);
 
         Given(user::is_on_vehicle_insurance_page);

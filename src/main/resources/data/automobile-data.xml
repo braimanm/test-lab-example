@@ -2,6 +2,7 @@
 
 <vehicle-insurance-domain-object>
     <aliases>
+        <test-name>+(Automobile)</test-name>
         <url>${env.getUrl()}</url>
         <vehicleType>Automobile</vehicleType>
         <make>Audi</make>

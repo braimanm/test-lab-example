@@ -1,13 +1,13 @@
 package com.yourcompany.example.pageobjects;
 
+import com.braimanm.ui.auto.components.WebComponent;
+import com.braimanm.ui.auto.data.DataTypes;
+import com.braimanm.ui.auto.pagecomponent.PageComponent;
+import com.braimanm.ui.auto.utils.WebDriverUtils;
+import com.braimanm.uitaf.support.PageObjectModel;
+import io.qameta.allure.Step;
 import org.assertj.core.api.Assertions;
 import org.openqa.selenium.support.FindBy;
-import ru.yandex.qatools.allure.annotations.Step;
-import ui.auto.core.components.WebComponent;
-import ui.auto.core.data.DataTypes;
-import ui.auto.core.pagecomponent.PageComponent;
-import ui.auto.core.support.PageObjectModel;
-import ui.auto.core.utils.WebHelper;
 
 public class SummaryPO extends PageObjectModel {
     //Vehicle Info related fields
@@ -80,11 +80,13 @@ public class SummaryPO extends PageObjectModel {
 
     @Step("Validate that the \"{0}\" field has the value \"{1}\"")
     private void reportForValidation(String name, String value) {
+        hideStepParams();
     }
 
     @Step("Validate that the \"{0}\" field is hidden")
     private void validateFieldIsNotDisplayed(String fieldName, PageComponent component) {
-        Assertions.assertThat(WebHelper.isDisplayed(component))
+        hideStepParams();
+        Assertions.assertThat(WebDriverUtils.isDisplayed(component))
                 .withFailMessage("Field " + fieldName + " is displayed but should be hidden!").isFalse();
     }
 

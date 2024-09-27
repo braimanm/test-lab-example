@@ -2,6 +2,7 @@
 
 <vehicle-insurance-domain-object>
     <aliases>
+        <test-name>+(Random)</test-name>
         <url>${env.getUrl()}</url>
         <vehicleType>$[CUSTOM_LIST('','Automobile,Truck,Motorcycle')]</vehicleType>
         <make>$[CUSTOM_LIST('','Audi,BMW,Ford,Honda,Mazda,Mercedes Benz,Nissan,Opel,Porsche,Renault,Skoda,Suzuki,Toyota,Volkswagen,Volvo')]</make>

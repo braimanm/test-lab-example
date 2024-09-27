@@ -1,9 +1,10 @@
 package com.yourcompany.example.components;
 
+import com.braimanm.ui.auto.data.DataTypes;
+import com.braimanm.ui.auto.pagecomponent.PageComponent;
 import org.assertj.core.api.Assertions;
 import org.openqa.selenium.Keys;
-import ui.auto.core.data.DataTypes;
-import ui.auto.core.pagecomponent.PageComponent;
+
 
 public class DateComponent extends PageComponent {
     @Override

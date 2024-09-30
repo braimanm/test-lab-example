@@ -2,9 +2,8 @@ package com.yourcompany.example.components;
 
 import com.braimanm.ui.auto.data.DataTypes;
 import com.braimanm.ui.auto.pagecomponent.PageComponent;
+import com.braimanm.ui.auto.utils.WebDriverUtils;
 import org.assertj.core.api.Assertions;
-import org.openqa.selenium.Keys;
-
 
 public class DateComponent extends PageComponent {
     @Override
@@ -13,8 +12,8 @@ public class DateComponent extends PageComponent {
 
     @Override
     public void setValue() {
-        String[] values = getData().split("-");
-        coreElement.sendKeys(values[0] + Keys.ARROW_RIGHT + values[1] + values[2]);
+        WebDriverUtils.getJSExecutor()
+                .executeScript("arguments[0].value = arguments[1];", coreElement, getData());
     }
 
     @Override

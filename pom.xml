@@ -10,10 +10,21 @@
 
     <properties>
         <java.version>11</java.version>
-        <uitaf.version>3.0.1</uitaf.version>
+        <uitaf.version>3.1.0</uitaf.version>
         <aspect-version>1.9.19</aspect-version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+
+    <repositories>
+        <repository>
+            <id>staging-repo1</id>
+            <url>https://s01.oss.sonatype.org/content/repositories/combraimanm-1008/</url>
+        </repository>
+        <repository>
+            <id>staging-repo2</id>
+            <url>https://s01.oss.sonatype.org/content/repositories/combraimanm-1009/</url>
+        </repository>
+    </repositories>
 
     <dependencies>
         <dependency>

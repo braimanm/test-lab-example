@@ -15,17 +15,6 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
-    <repositories>
-        <repository>
-            <id>staging-repo1</id>
-            <url>https://s01.oss.sonatype.org/content/repositories/combraimanm-1008/</url>
-        </repository>
-        <repository>
-            <id>staging-repo2</id>
-            <url>https://s01.oss.sonatype.org/content/repositories/combraimanm-1009/</url>
-        </repository>
-    </repositories>
-
     <dependencies>
         <dependency>
             <groupId>com.braimanm</groupId>
